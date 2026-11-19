@@ -1,51 +1,55 @@
 # CarePoint Hospital Management App
 
-A Flutter front-end-only internship demo. It uses fictional sample data and local device storage (SharedPreferences); it does not connect to a backend or online database.
+A Flutter-based front-end internship demo for a Hospital Management System. The app uses fictional sample data and does not connect to a backend or online database.
 
-## Included modules
-- Splash screen and mock role selection (Admin, Doctor, Receptionist)
-- Remembered demo session
-- Dashboard with patient/doctor/appointment/revenue cards and a sample activity chart
-- Patient records: add, edit, delete, search
-- Doctor directory: add, edit, delete, search, availability toggle
-- Appointments: book, reschedule, cancel/delete, update status (Pending/Confirmed/Completed/Cancelled)
-- Billing: create/edit/delete invoices and update Paid/Unpaid status
-- Profile, logout, dark-mode toggle
-- Local JSON persistence through SharedPreferences
-- GitHub Actions workflow to build the Android APK in the cloud
+## Implemented Features
 
-## Demo login
-- Email: `admin@carepoint.com`
-- Password: `123456`
-- Role: choose Admin, Doctor, or Receptionist
+- Splash screen
+- Mock login with Admin, Doctor, and Receptionist role selection
+- Dashboard with patient, doctor, appointment, and invoice counts
+- Patient records: add and delete
+- Doctor records: add and delete
+- Appointment records: add and delete
+- Billing records: add and delete
+- Light and dark theme toggle
+- Logout functionality
 
-This is a mock front-end login for demonstration only, not production authentication.
+## Demo Login
 
-## Build locally (if Android SDK is installed)
-```bash
-flutter create . --platforms=android
-flutter pub get
-flutter run
-flutter build apk --release
-```
+- Enter any email address.
+- Enter any password.
+- Select Admin, Doctor, or Receptionist.
 
-## Build APK without installing Android Studio on your laptop
-1. Create a GitHub repository.
-2. Upload the contents of this project to the repository (keep `.github/workflows/build-apk.yml`).
-3. Open the repository's **Actions** tab.
-4. Run **Build Android APK** (or push to `main`).
-5. When the workflow finishes, open the run and download the `hospital-management-release-apk` artifact.
+This is a demonstration login, not production authentication.
 
-The APK is built on GitHub-hosted infrastructure. A GitHub account and internet access are required. Review and test the generated APK on an Android device before submission.
+## Technologies Used
 
-## Submission checklist
-- GitHub repository URL
-- Release APK artifact (download it from the Actions run)
-- 2–3 minute demo video showing login, dashboard, patients, doctors, appointments, billing and profile
-- README and screenshots
+- Flutter
+- Dart
+- Material Design
+- SharedPreferences (login session)
 
-## Important scope notes
-- The app uses fictional sample patient information only.
-- No real patient or medical records should be entered.
-- The dashboard chart is illustrative sample activity, not live analytics.
-- This starter implementation provides basic CRUD/search and local persistence; verify the app and adjust branding/screenshots to match your internship's expectations before submitting.
+## Build APK
+
+The Android APK is built using GitHub Actions.
+
+1. Open the repository's Actions tab.
+2. Select Build Android APK.
+3. Run the workflow.
+4. Open the successful workflow run.
+5. Download the `hospital-management-release-apk` artifact.
+
+## Project Scope
+
+- This is a front-end demonstration project.
+- Sample records are fictional.
+- Record changes are not permanently saved.
+- No real patient or medical information should be entered.
+- The generated APK should be tested on an Android device before submission.
+
+## Submission
+
+- GitHub repository
+- Release APK
+- Project screenshots
+- Demo video (if required by the internship)
